@@ -9,7 +9,7 @@ const ByCategory = (props) =>{
     const category= props.category;
     // const cat = "Dessert";
     useEffect(()=>{
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?category=${category}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
         .then((res) => res.json())
         .then((data) => setMeals(data.meals));
 
